@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Dimensions} from 'react-native';
 import { BarChart } from 'react-native-chart-kit';
 
 const screenWidth = Dimensions.get('window').width;
@@ -14,13 +14,16 @@ const data = {
 };
 
 const ExerciseGraph = () => {
-  const formatYLabel = (value) => `$${value}`;
+  const chartConfig = {
+    backgroundColor: '#ffffff',
+    backgroundGradientFrom: 'gray',
+    backgroundGradientTo: '#000000',
+    decimalPlaces: 0,
+    barPercentage: 1.3,
+    color: (opacity = 1.0) => `rgba(255, 255, 255, ${opacity})`, // 예시로 흰색으로 설정
+  };
+  const formatYLabel = (value) => `${value}`;
   return (
-    <ScrollView
-      horizontal
-      contentContainerStyle={styles.container}
-      showsHorizontalScrollIndicator={false}
-    >
       <View>
         <Text style={styles.title}> 운동시간 그래프</Text>
         <View>
@@ -29,17 +32,7 @@ const ExerciseGraph = () => {
             width={screenWidth}
             height={200}
             yAxisSuffix="분"
-
-            chartConfig={{
-              backgroundColor: '#ffffff',
-              backgroundGradientFrom: 'gray',
-              backgroundGradientTo: '#000000',
-              decimalPlaces: 0,
-              color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-              labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-              barPercentage: 1.3,
-            }}
-            
+            chartConfig={chartConfig}
             style={{
               marginVertical: 2,
               borderRadius: 16,
@@ -49,7 +42,6 @@ const ExerciseGraph = () => {
           />
         </View>
       </View>
-    </ScrollView>
   );
 }
 

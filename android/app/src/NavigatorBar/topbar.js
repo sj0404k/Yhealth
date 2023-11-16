@@ -10,17 +10,17 @@ const YHealthTopBar = () => {
         <Text style={{ color: 'blue' }}>Y</Text>Health</Text>
       <View style={styles.icon}>
         <Icon.Button
-          name="qrcode"
+          name="scan-helper"
           size={31}
           color="black"
           backgroundColor='transparent'
           style={{ padding: 0, paddingRight: 6 }} />
         <Icon.Button
-          name="scan-helper"
+          name="search1"
           size={31}
           color="black"
           backgroundColor='transparent'
-          style={{ padding: 0}} />
+          style={{ padding: 0 }} />
       </View>
 
     </View>
@@ -29,9 +29,9 @@ const YHealthTopBar = () => {
 const styles = StyleSheet.create({
   topBarContainer: {
     backgroundColor: '#ffffff',
-    paddingTop: 0,
+    paddingTop: 5,
     paddingRight: 20,
-    paddingBottom: 0,
+    paddingBottom: 5,
     paddingLeft: 20,
     alignItems: 'stretch',
     flexDirection: 'row',

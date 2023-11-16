@@ -7,8 +7,8 @@ const screenWidth = Dimensions.get('window').width - 8;
 const ExerciseRecord = () => {
 
   const exerciseData = [
-    { exerciseType: '스쿼트', time: '1분00초', sets: '3세트',Reps:'30초' },
-    { exerciseType: '벤치 프레스', time: '5분30초', sets: '4세트',Reps:'10초' },
+    { exerciseType: '스쿼트', time: '1분00초', sets: '3세트', Reps: '30초' },
+    { exerciseType: '벤치 프레스', time: '5분30초', sets: '4세트', Reps: '10초' },
     // 다른 운동 데이터 추가
   ];
 
