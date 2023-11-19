@@ -35,10 +35,10 @@ const CalendarComponent = () => {
             renderHeader={renderHeader}
             style={{ borderRadius: 30, padding: 12 }}
           /></View>
-        {/* <View style={{ padding: 3 }}>
-          <ExerciseGraph />
-        </View> */}
         <View style={{ padding: 3 }}>
+          <ExerciseGraph />
+        </View>
+        <View style={{ padding: 3, backgroundColor: '#ffffff', borderRadius: 30 }}>
           <ExerciseRecord />
         </View>
       </View>

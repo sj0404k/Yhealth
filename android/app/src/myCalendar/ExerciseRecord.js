@@ -1,7 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
-
-const screenWidth = Dimensions.get('window').width - 8;
+import { View, Text, StyleSheet } from 'react-native';
 
 
 const ExerciseRecord = () => {
