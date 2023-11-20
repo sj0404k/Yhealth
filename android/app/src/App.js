@@ -5,8 +5,8 @@ import MainComponent from './MainPage/mainComponent';
 const App = () => {
   return (
     <View>
-      {/* <CalendarComponent /> */}
-      <MainComponent />
+      <CalendarComponent />
+      {/* <MainComponent /> */}
     </View>
   );
 };

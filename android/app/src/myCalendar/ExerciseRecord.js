@@ -1,14 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-
-const ExerciseRecord = () => {
-
-  const exerciseData = [
-    { exerciseType: '스쿼트', time: '1분00초', sets: '3세트', Reps: '30초' },
-    { exerciseType: '벤치 프레스', time: '5분30초', sets: '4세트', Reps: '10초' },
-    // 다른 운동 데이터 추가
-  ];
+const ExerciseRecord = ({ exerciseData, selectedDate }) => {
+  // 선택된 날짜를 기반으로 운동 데이터 필터링
+  const filteredExerciseData = exerciseData.filter(
+    (data) => data.date === selectedDate
+  );
 
   return (
     <View style={styles.container}>
@@ -20,7 +17,7 @@ const ExerciseRecord = () => {
           <Text style={styles.cell}>세트</Text>
           <Text style={styles.cell}>휴식</Text>
         </View>
-        {exerciseData.map((data, index) => (
+        {filteredExerciseData.map((data, index) => (
           <View key={index} style={styles.row}>
             <Text style={styles.cell}>{data.exerciseType}</Text>
             <Text style={styles.cell}>{data.time}</Text>
@@ -31,7 +28,7 @@ const ExerciseRecord = () => {
       </View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
