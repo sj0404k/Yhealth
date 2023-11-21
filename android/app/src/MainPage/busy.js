@@ -22,7 +22,7 @@ const Busy = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>헬스장 혼잡도</Text>
-      <BarChart
+      {/* <BarChart
         style={styles.chart}
         data={data}
         width={300}
@@ -31,7 +31,7 @@ const Busy = () => {
         chartConfig={chartConfig}
         horizontal
         fromZero
-      />
+      /> */}
     </View>
   );
 };
