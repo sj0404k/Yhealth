@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, StyleSheet, Text, ScrollView } from 'react-native';
-import YHealthTopBar from '../NavigatorBar/topbar';
+import YHealthTopBar from '../../NavigatorBar/topbar';
 import Busy from './busy';
 import Weight from './weightChange';
 import Board from './board';
 
-const MainComponent = () => {
+const MainComponent = ({navigation}) => {
   const margin = 5;
   return (
     <ScrollView>
@@ -16,6 +16,7 @@ const MainComponent = () => {
         </View>
         <View style={styles.Container}>
           <Weight />
+          
         </View>
         <View style={styles.Container}>
           <Board />
